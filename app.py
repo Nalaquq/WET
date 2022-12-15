@@ -15,5 +15,15 @@ def index():
     return render_template("base.html")
 
 
+@app.route("/start")
+def index():
+    return render_template("base.html")
+
+
+@app.route("/select")
+def index():
+    return render_template("base.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True)

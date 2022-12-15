@@ -20,7 +20,20 @@
 ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white)
 
-# APIs  
-## Nalaquq relies on the following APIs to generate weather data for flight planning: 
+# Usage
+## Initializing the app with init.sh
 
-1. 
+## Activating & Deactivating virtual enviroments 
+Use the venv.sh bash script to activate your virtual enviroment: 
+
+'''
+source venv.sh 
+''''
+
+To deactivate the virtual enviroment simply execute the deactivate command: 
+
+'''
+deactivate
+'''
+
+
