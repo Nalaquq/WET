@@ -26,14 +26,14 @@
 ## Activating & Deactivating virtual enviroments 
 Use the venv.sh bash script to activate your virtual enviroment: 
 
-'''
+~~~
 source venv.sh 
-''''
+~~~
 
 To deactivate the virtual enviroment simply execute the deactivate command: 
 
-'''
+~~~
 deactivate
-'''
+~~~
 
 
