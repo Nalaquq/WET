@@ -21,9 +21,9 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white) ![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white)
 
 # Usage
-## Initializing the app with init.sh
+## init.sh
 
-## Activating & Deactivating virtual enviroments 
+## venv.sh 
 Use the venv.sh bash script to activate your virtual enviroment: 
 
 ~~~
