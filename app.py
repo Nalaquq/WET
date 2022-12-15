@@ -18,8 +18,8 @@ def make_user_map():
         u_long=(response['lon'])
         u_lat=(response['lat'])
         ####check documentation about what comes first long or lat
-        folium_map=fl.Map(location=[41.88, -87.62], zoom_start=13, tiles='cartodbpositron', width='75%', height='75%')
-        folium_map.save('index.html')
+        folium_map=fl.Map(location=[u_lat, u_long], zoom_start=13, tiles='cartodbpositron', width='75%', height='75%')
+        folium_map.save('templates/index.html')
     locate_user()
 
 make_user_map()
