@@ -17,7 +17,7 @@ def make_user_map():
         response=json.loads(client_location.text)
         u_long=(response['lon'])
         u_lat=(response['lat'])
-        ####check documentation about what comes first long or lat
+        ###add try/except block in case internet does not work
         folium_map=fl.Map(location=[u_lat, u_long], zoom_start=13, tiles='cartodbpositron', width='75%', height='75%')
         folium_map.save('templates/index.html')
     locate_user()
@@ -37,9 +37,9 @@ def start():
     return render_template("base.html")
 
 
-@app.route("/select")
+@app.route("/map")
 def select():
-    return render_template("base.html")
+    return render_template("map_template.html")
 
 
 if __name__ == "__main__":
