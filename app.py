@@ -11,26 +11,48 @@ app = Flask(__name__)
 
 bootstrap = Bootstrap(app)
 
-def make_user_map(): 
+
+def make_user_map():
     def locate_user():
-        client_location=requests.get('http://ip-api.com/json/')
-        response=json.loads(client_location.text)
-        u_long=(response['lon'])
-        u_lat=(response['lat'])
-        ###add try/except block in case internet does not work
-        folium_map=fl.Map(location=[u_lat, u_long], zoom_start=13, tiles='cartodbpositron', width='75%', height='75%')
-        folium_map.save('templates/index.html')
+        try:
+            client_location = requests.get("http://ip-api.com/json/")
+            response = json.loads(client_location.text)
+            u_long = response["lon"]
+            u_lat = response["lat"]
+            folium_map = fl.Map(
+                location=[u_lat, u_long],
+                zoom_start=13,
+                tiles="cartodbpositron",
+                width="75%",
+                height="75%",
+            )
+            folium_map.save("templates/index.html")
+        except:  # loads Quinhagak coordinates if lacking internet
+            folium_map = fl.Map(
+                location=[59.7488889, -161.9020],
+                zoom_start=13,
+                tiles="cartodbpositron",
+                width="75%",
+                height="75%",
+            )
+            folium_map.save("templates/index.html")
+            pass
+
     locate_user()
 
+
 make_user_map()
+
 
 @app.route("/")
 def login():
     return render_template("base.html")
 
+
 @app.route("/home")
 def index():
     return render_template("base.html")
+
 
 @app.route("/start")
 def start():
