@@ -6,6 +6,7 @@ import requests
 import os
 import folium as fl
 import json
+import leafmap
 
 app = Flask(__name__)
 
