@@ -5,18 +5,18 @@
 
 # Directory structure
 
-.
-├── init.sh
-├── main.py
-├── readme.md
-├── requirements.txt
-├── static
-│   └── css
-│       └── universal.css
-├── templates
-│   └── index.html
-├── venv.sh
-└── wet.py
+	.
+	├── init.sh
+	├── main.py
+	├── readme.md
+	├── requirements.txt
+	├── static
+	│   └── css
+	│      └── universal.css
+	├── templates
+	│   	└── index.html
+	├── venv.sh
+	└── wet.py
 
 
 # Languages & Dependencies 
