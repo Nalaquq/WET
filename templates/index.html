@@ -26,14 +26,27 @@
 	    	maxZoom: 19,
 	    	attribution: '&copy; <a href="http://www.openstreetmap.org/copyrig	ht">OpenStreetMap</a>'
 		}).addTo(map);
-	var drawnItems = new L.FeatureGroup();
-     map.addLayer(drawnItems);
-	var drawControl = new L.Control.Draw({
+		var drawnItems = new L.FeatureGroup();
+     		map.addLayer(drawnItems);
+		var drawControl = new L.Control.Draw({
 	              edit: {
 			                   featureGroup: drawnItems
 			               }
 	          });
-     map.addControl(drawControl);
+     		map.addControl(drawControl);
+
+		map.on('draw:created', function (e) {
+			    var type = e.layerType,
+				        layer = e.layer;
+
+			    if (type === 'marker') {
+				            // Do marker specific actions
+				        }
+
+			    // Do whatever else you need to. (save to db, add to map etc)
+			    drawnItems.addLayer(layer);
+		});
+
 	</script>
 </body>
 
