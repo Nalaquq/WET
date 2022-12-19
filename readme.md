@@ -5,10 +5,18 @@
 
 # Directory structure
 
-    .
-    ├── wet.py                  # custom ArcPy script
-    ├── requirements		
-    └── README.md
+.
+├── init.sh
+├── main.py
+├── readme.md
+├── requirements.txt
+├── static
+│   └── css
+│       └── universal.css
+├── templates
+│   └── index.html
+├── venv.sh
+└── wet.py
 
 
 # Languages & Dependencies 
