@@ -15,6 +15,8 @@
   <!-- Install leaflet-draw library from CDN--> 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.css"/>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.4.2/leaflet.draw.js"></script> 
+ <!--AJAX dependencies--> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 </head>
 
@@ -29,25 +31,33 @@
 		var drawnItems = new L.FeatureGroup();
      		map.addLayer(drawnItems);
 		var drawControl = new L.Control.Draw({
-	              edit: {
-			                   featureGroup: drawnItems
+	              edit: { 
+			      featureGroup: drawnItems
 			               }
 	          });
      		map.addControl(drawControl);
 
 		map.on('draw:created', function (e) {
-			    var type = e.layerType,
-				        layer = e.layer;
+			    var type = e.layerType;
+			    var layer = e.layer; 
+			
+		
+			//push layer edits to Flask 
+			    var shape=layer.toGeoJSON()
+			    var shape_for_db=JSON.stringify(shape);
+			    $.ajax({
+			    url: '/map', 
+			    type: 'POST',
+			    data: shape_for_db,
+			    })
+			    .done(function(result){
+			    console.log(result)
+			})
+			//add layer to map 
+			drawnItems.addLayer(layer);
 
-			    if (type === 'marker') {
-				            // Do marker specific actions
-				        }
-
-			    // Do whatever else you need to. (save to db, add to map etc)
-			    drawnItems.addLayer(layer);
 		});
 
 	</script>
 </body>
-
 </html>
