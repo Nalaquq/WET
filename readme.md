@@ -5,7 +5,7 @@ A simple open source ArcPy script for measuring coastal and riverine erosion in 
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Linux](https://svgshare.com/i/Zhy.svg)](https://svgshare.com/i/Zhy.svg) [![PyPI status](https://img.shields.io/pypi/status/ansicolortags.svg)](https://pypi.python.org/pypi/ansicolortags/t)
 
 # How it works
-![alt text](https://github.com/[Nalaquq]/[WET]/blob/master/How%it%works.tif?raw=true)
+![alt text](https://github.com/[Nalaquq]/[WET]/blob/master/WET.pdf?raw=true)
 # Directory structure
 
 	.
