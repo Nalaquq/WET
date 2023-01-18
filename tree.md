@@ -1,4 +1,8 @@
 .
+├── How it works.tif
+├── arcgis_pro
+│   ├── WET_v1.ipynb
+│   └── readme.html
 ├── init.sh
 ├── main.py
 ├── readme.md
@@ -15,4 +19,4 @@
 ├── venv.sh
 └── wet.py
 
-4 directories, 11 files
+5 directories, 14 files

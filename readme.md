@@ -47,7 +47,8 @@ To deactivate the virtual enviroment simply execute the deactivate command:
 deactivate
 ~~~ 
 
-##Using the tool in ArcGIS Pro
+#Using the tool in ArcGIS Pro
+
 To use this script in ArcGIS Pro, a copy of ArcGIS Pro 3.0 is required, along withtwo pre-georeferenced images of the region of interest. A seperate readme.html file and juptyer notebook file is located in the arcgis_pro directory. 
 
 
