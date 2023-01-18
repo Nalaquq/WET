@@ -4,12 +4,15 @@
 ├── readme.md
 ├── requirements.txt
 ├── static
-│   └── css
-│       └── universal.css
+│   ├── css
+│   │   └── universal.css
+│   └── js
+│       └── map.js
 ├── templates
+│   ├── base.html
 │   └── index.html
 ├── tree.md
 ├── venv.sh
 └── wet.py
 
-3 directories, 9 files
+4 directories, 11 files
