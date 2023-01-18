@@ -6,6 +6,7 @@ A simple open source ArcPy script for measuring coastal and riverine erosion in 
 
 # How it works
 ![alt text](https://github.com/[Nalaquq]/[WET]/blob/master/WET.pdf?raw=true)
+![My Image](WET.jpg)
 # Directory structure
 
 	.
