@@ -1,5 +1,6 @@
 .
 ├── How it works.tif
+├── WET.jpg
 ├── arcgis_pro
 │   ├── WET_v1.ipynb
 │   └── readme.html
@@ -19,4 +20,4 @@
 ├── venv.sh
 └── wet.py
 
-5 directories, 14 files
+5 directories, 15 files
